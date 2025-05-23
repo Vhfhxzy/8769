@@ -43,7 +43,7 @@ jobs:
         run: gradle assembleDebug
         
       - name: Upload Debug APK
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v2.3.1
         with:
           name: TimeChanger-debug
           path: app/build/outputs/apk/debug/app-debug.apk 
