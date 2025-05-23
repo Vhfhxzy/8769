@@ -5,7 +5,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.0.4'
+        classpath 'com.android.tools.build:gradle:4.2.2'
     }
 }
 
@@ -13,9 +13,16 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        maven { url 'https://api.xposed.info/' }
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+// 确保使用兼容的gradle版本
+wrapper {
+    gradleVersion = '6.9'
+    distributionType = 'bin'
 } 
